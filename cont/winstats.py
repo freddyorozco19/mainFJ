@@ -5,7 +5,6 @@ import io
 import base64
 
 st.header("WIN STATS")
-st.image("Resources/Img/wyscoutlogo.png")
 
 # Cargar una imagen
 image1 = Image.open("Resources/Img/wyscoutlogo.png")

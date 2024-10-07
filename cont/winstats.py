@@ -44,7 +44,7 @@ with imgmn01:
     st.markdown(
         f"""
         <div style="border: 4px solid #FF0046; padding: 10px; display: inline-block;">
-            <img src="data:image/jpeg;base64,{image_to_base64(resized_image)}" style="width: 100%;">
+            <img src="data:image/jpeg;base64,{image_to_base64(resized_image1)}" style="width: 100%;">
         </div>
         """,
         unsafe_allow_html=True

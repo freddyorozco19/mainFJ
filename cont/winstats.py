@@ -12,6 +12,8 @@ image1 = Image.open("Resources/Img/wyscoutlogo.png")
 image2 = Image.open("Resources/Img/optalogo.png")
 image3 = Image.open("Resources/Img/fbreflogo.png")
 
+link_url = "https://www.winstats.com.ec"
+
 # Obtener dimensiones de la segunda imagen
 new_width, new_height = image2.size  # Ancho y alto de la segunda imagen
 resized_image1 = image1.resize((new_width, new_height), Image.LANCZOS)

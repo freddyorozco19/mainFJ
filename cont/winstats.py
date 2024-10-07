@@ -12,12 +12,10 @@ img = image_select(
 )
 st.write(img)
 
-# Verifica si se ha seleccionado una imagen
 if img:
-    if img == "https://bagongkia.github.io/react-image-picker/0759b6e526e3c6d72569894e58329d89.jpg":
-        # Abre el enlace específico en una nueva pestaña si se selecciona la primera imagen
-        st.markdown('<a href="http://www.winstats.com.ec" target="_blank">Ir a Win Stats</a>', unsafe_allow_html=True)
+    if img == images[1]:  # Primera imagen
+        # Mostrar la imagen como un enlace
+        st.markdown(f'<a href="http://www.winstats.com.ec" target="_blank"><img src="{img}" style="width: 100%;"></a>', unsafe_allow_html=True)
     else:
-        st.write("Has seleccionado una imagen, pero no se abrirá un enlace.")
-
+        st.image(img, caption="Has seleccionado una imagen.")
 st.header("WIN STATS")

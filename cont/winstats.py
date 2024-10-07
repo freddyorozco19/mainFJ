@@ -10,19 +10,22 @@ st.image("Resources/Img/wyscoutlogo.png")
 # Cargar una imagen
 image1 = Image.open("Resources/Img/wyscoutlogo.png")
 image2 = Image.open("Resources/Img/optalogo.png")
-
+image3 = Image.open("Resources/Img/fbreflogo.png")
 
 # Obtener dimensiones de la segunda imagen
 new_width, new_height = image2.size  # Ancho y alto de la segunda imagen
-# Redimensionar la primera imagen
-resized_image = image1.resize((new_width, new_height), Image.LANCZOS)
-# Convertir a RGB si la imagen tiene un canal alfa (opcional)
+resized_image1 = image1.resize((new_width, new_height), Image.LANCZOS)
 if resized_image.mode == "RGBA":
-    resized_image = resized_image.convert("RGB")
-# Guardar la nueva imagen
-resized_image.save("Resources/Img/resized_wyscoutlogo.png")  # Cambia el nombre según necesites
-# Mostrar la nueva imagen (opcional)
-resized_image.show()
+    resized_image = resized_image1.convert("RGB")
+resized_image1.save("Resources/Img/resized_wyscoutlogo.png")  # Cambia el nombre según necesites
+resized_image1.show()
+
+resized_image2 = image3.resize((new_width, new_height), Image.LANCZOS)
+if resized_image2.mode == "RGBA":
+    resized_image2 = resized_image2.convert("RGB")
+resized_image2.save("Resources/Img/resized_fbreflogo.png")  # Cambia el nombre según necesites
+resized_image2.show()
+
 
 
 # Función para convertir la imagen a base64
@@ -38,7 +41,6 @@ def image_to_base64(image):
 
 imgmn01, imgmn02, imgmn03 = st.columns(3)
 with imgmn01:
-    # Mostrar la imagen con un marco
     st.markdown(
         f"""
         <div style="border: 4px solid #FF0046; padding: 10px; display: inline-block;">
@@ -48,7 +50,6 @@ with imgmn01:
         unsafe_allow_html=True
     )
 with imgmn02:
-    # Mostrar la imagen con un marco
     st.markdown(
         f"""
         <div style="border: 4px solid #FF0046; padding: 10px; display: inline-block;">
@@ -57,5 +58,13 @@ with imgmn02:
         """,
         unsafe_allow_html=True
     )
-
+with imgmn03:
+    st.markdown(
+        f"""
+        <div style="border: 4px solid #FF0046; padding: 10px; display: inline-block;">
+            <img src="data:image/jpeg;base64,{image_to_base64(resized_image2)}" style="width: 100%;">
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 

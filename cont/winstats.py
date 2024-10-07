@@ -8,6 +8,14 @@ st.image("Resources/Img/wyscoutlogo.png")
 # Cargar una imagen
 image = Image.open("Resources/Img/wyscoutlogo.png")
 
+# Función para convertir la imagen a base64
+def image_to_base64(image):
+    import io
+    import base64
+    buffered = io.BytesIO()
+    image.save(buffered, format="JPEG")
+    img_str = base64.b64encode(buffered.getvalue()).decode()
+    return img_str
 # Mostrar la imagen con un marco
 st.markdown(
     f"""
@@ -18,11 +26,4 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Función para convertir la imagen a base64
-def image_to_base64(image):
-    import io
-    import base64
-    buffered = io.BytesIO()
-    image.save(buffered, format="JPEG")
-    img_str = base64.b64encode(buffered.getvalue()).decode()
-    return img_str
+

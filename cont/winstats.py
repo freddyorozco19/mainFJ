@@ -12,4 +12,8 @@ img = image_select(
 )
 st.write(img)
 
+# Verifica si se ha seleccionado una imagen
+if img:
+    # Abre el enlace específico en una nueva pestaña
+    st.markdown('<a href="http://www.winstats.com.ec" target="_blank">Ir a Win Stats</a>', unsafe_allow_html=True)
 st.header("WIN STATS")

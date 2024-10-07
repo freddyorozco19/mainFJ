@@ -13,7 +13,7 @@ img = image_select(
 st.write(img)
 
 if img:
-    if img == images[1]:  # Primera imagen
+    if img == images[0]:  # Primera imagen
         # Mostrar la imagen como un enlace
         st.markdown(f'<a href="http://www.winstats.com.ec" target="_blank"><img src="{img}" style="width: 100%;"></a>', unsafe_allow_html=True)
     else:

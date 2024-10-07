@@ -23,4 +23,14 @@ import requests
 #from PIL import Image
 from matplotlib.patches import Rectangle
 import math
-st.title("PRINCIPAL")
+############################################################################################################################################################################################################################
+st.set_page_config(layout="wide")
+navigation_tree = {
+    "Menu": [
+        st.Page("cont/WinStats.py", title="Win Stats", icon=":material/download:"),
+        #st.Page("cont/OptaJoinData.py", title="Join Data", icon=":material/cell_merge:"),
+        st.Page("cont/PilotData.py", title="Pilot Data", icon=":material/analytics:"),        
+        st.Page("cont/RegisterData.py", title="Register Data", icon=":material/leaderboard:")]
+}
+nav = st.navigation(navigation_tree, position="sidebar")
+nav.run()

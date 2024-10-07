@@ -63,7 +63,7 @@ with imgmn02:
         f"""
         <a href="{link_url}" target="_blank">
             <div style="border: 4px solid #FF0046; padding: 5px; display: inline-block;">
-                <img src="{image2}" style="width: 100%;">
+                <img src="{image1_base64}" style="width: 100%;">
             </div>
         </a>
         """,

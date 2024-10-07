@@ -8,7 +8,8 @@ st.header("WIN STATS")
 st.image("Resources/Img/wyscoutlogo.png")
 
 # Cargar una imagen
-image = Image.open("Resources/Img/wyscoutlogo.png")
+image1 = Image.open("Resources/Img/wyscoutlogo.png")
+image2 = Image.open("Resources/Img/wyscoutlogo.png")
 
 # Función para convertir la imagen a base64
 def image_to_base64(image):
@@ -20,14 +21,27 @@ def image_to_base64(image):
     img_str = base64.b64encode(buffered.getvalue()).decode()
     return img_str
 
-# Mostrar la imagen con un marco
-st.markdown(
-    f"""
-    <div style="border: 5px solid #FF0046; padding: 10px; display: inline-block;">
-        <img src="data:image/jpeg;base64,{image_to_base64(image)}" style="width: 100%;">
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+
+imgmn01, imgmn02, imgmn03 = st.columns(3)
+with imgmn01:
+    # Mostrar la imagen con un marco
+    st.markdown(
+        f"""
+        <div style="border: 5px solid #FF0046; padding: 10px; display: inline-block;">
+            <img src="data:image/jpeg;base64,{image_to_base64(image1)}" style="width: 100%;">
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+with imgmn02:
+    # Mostrar la imagen con un marco
+    st.markdown(
+        f"""
+        <div style="border: 5px solid #FF0046; padding: 10px; display: inline-block;">
+            <img src="data:image/jpeg;base64,{image_to_base64(image2)}" style="width: 100%;">
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
 

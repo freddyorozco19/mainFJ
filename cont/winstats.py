@@ -1,6 +1,8 @@
 import streamlit as st
 from streamlit_image_select import image_select
 from PIL import Image
+import io
+import base64
 
 st.header("WIN STATS")
 st.image("Resources/Img/wyscoutlogo.png")

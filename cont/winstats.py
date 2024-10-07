@@ -41,7 +41,7 @@ with imgmn01:
     # Mostrar la imagen con un marco
     st.markdown(
         f"""
-        <div style="border: 5px solid #FF0046; padding: 10px; display: inline-block;">
+        <div style="border: 4px solid #FF0046; padding: 10px; display: inline-block;">
             <img src="data:image/jpeg;base64,{image_to_base64(resized_image)}" style="width: 100%;">
         </div>
         """,
@@ -51,7 +51,7 @@ with imgmn02:
     # Mostrar la imagen con un marco
     st.markdown(
         f"""
-        <div style="border: 5px solid #FF0046; padding: 10px; display: inline-block;">
+        <div style="border: 4px solid #FF0046; padding: 10px; display: inline-block;">
             <img src="data:image/jpeg;base64,{image_to_base64(image2)}" style="width: 100%;">
         </div>
         """,

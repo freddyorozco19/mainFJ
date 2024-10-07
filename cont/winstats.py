@@ -16,11 +16,15 @@ new_width = 2061  # Manteniendo el ancho de la segunda imagen
 new_height = int((29 / 35) * new_width)  # Calculando el alto para la relación 35:29
 # Redimensionar la imagen
 resized_image = image1.resize((new_width, new_height), Image.LANCZOS)
+# Convertir a RGB si la imagen tiene un canal alfa
+if resized_image.mode == "RGBA":
+    resized_image = resized_image.convert("RGB")
+
 # Guardar la nueva imagen
-resized_image.save("resized_image.jpg")
+resized_image.save("resized_image.jpg", "JPEG")
+
 # Mostrar la nueva imagen (opcional)
 resized_image.show()
-
 # Función para convertir la imagen a base64
 def image_to_base64(image):
     buffered = io.BytesIO()

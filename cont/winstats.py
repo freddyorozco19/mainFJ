@@ -1,5 +1,6 @@
 import streamlit as st
 from streamlit_image_select import image_select
+from PIL import Image
 
 st.header("WIN STATS")
 st.image("Resources/Img/wyscoutlogo.png")

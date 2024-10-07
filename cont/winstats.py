@@ -39,14 +39,24 @@ def image_to_base64(image):
     return img_str
 
 
+# Convertir image1 a base64
+image1_base64 = image_to_base64(image1)
+image2_base64 = image_to_base64(resized_image1)
+image3_base64 = image_to_base64(resized_image2)
+
+
 imgmn01, imgmn02, imgmn03 = st.columns(3)
 with imgmn01:
+    #st.markdown(
+    #    f"""
+    #    <div style="border: 4px solid #FF0046; padding: 10px; display: inline-block;">
+    #        <img src="data:image/jpeg;base64,{image_to_base64(resized_image1)}" style="width: 100%;">
+    #    </div>
+    #    """,
+    #    unsafe_allow_html=True
+    #)
     st.markdown(
-        f"""
-        <div style="border: 4px solid #FF0046; padding: 10px; display: inline-block;">
-            <img src="data:image/jpeg;base64,{image_to_base64(resized_image1)}" style="width: 100%;">
-        </div>
-        """,
+        f'<a href="{link_url}" target="_blank"><img src="{image1_base64}" alt="Image" style="width: 100%;"></a>',
         unsafe_allow_html=True
     )
 with imgmn02:
@@ -71,22 +81,6 @@ with imgmn03:
 
 
 
-# Cargar las imágenes
-image11 = Image.open("Resources/Img/wyscoutlogo.png")  # Primera imagen
-image22 = Image.open("Resources/Img/optalogo.png")      # Segunda imagen
-
-# URL de redirección
-link_url = "https://www.winstats.com.ec"
-
-# Convertir la imagen a formato base64 para usar en Markdown
-def image_to_base64(image):
-    import io
-    buffered = io.BytesIO()
-    image.save(buffered, format="PNG")
-    return "data:image/png;base64," + base64.b64encode(buffered.getvalue()).decode()
-
-# Convertir image1 a base64
-image1_base64 = image_to_base64(image11)
 
 # Usar Markdown para crear un enlace alrededor de la imagen
 st.markdown(

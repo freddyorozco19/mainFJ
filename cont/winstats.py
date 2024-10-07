@@ -5,7 +5,7 @@ import io
 import base64
 
 st.header("WIN STATS")
-
+st.divider()
 # Cargar una imagen
 image1 = Image.open("Resources/Img/wyscoutlogo.png")
 image2 = Image.open("Resources/Img/optalogo.png")
@@ -40,12 +40,10 @@ def image_to_base64(image):
     img_str = base64.b64encode(buffered.getvalue()).decode()
     return f"data:image/png;base64,{img_str}"
 
-
 # Convertir image1 a base64
 image1_base64 = image_to_base64(image2)
 image2_base64 = image_to_base64(resized_image1)
 image3_base64 = image_to_base64(resized_image2)
-
 
 imgmn01, imgmn02, imgmn03 = st.columns(3)
 with imgmn01:
@@ -56,9 +54,7 @@ with imgmn01:
                 <img src="{image2_base64}" style="width: 100%;">
             </div>
         </a>
-        """,
-        unsafe_allow_html=True
-    )
+        """, unsafe_allow_html=True)
 with imgmn02:
     st.markdown(
         f"""
@@ -81,6 +77,4 @@ with imgmn03:
         """,
         unsafe_allow_html=True
     )
-
-
-
+st.divider()

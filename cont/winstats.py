@@ -41,23 +41,21 @@ def image_to_base64(image):
 
 
 # Convertir image1 a base64
-image1_base64 = image_to_base64(image1)
+image1_base64 = image_to_base64(image2)
 image2_base64 = image_to_base64(resized_image1)
 image3_base64 = image_to_base64(resized_image2)
 
 
 imgmn01, imgmn02, imgmn03 = st.columns(3)
 with imgmn01:
-    #st.markdown(
-    #    f"""
-    #    <div style="border: 4px solid #FF0046; padding: 10px; display: inline-block;">
-    #        <img src="data:image/jpeg;base64,{image_to_base64(resized_image1)}" style="width: 100%;">
-    #    </div>
-    #    """,
-    #    unsafe_allow_html=True
-    #)
     st.markdown(
-        f'<a href="{link_url}" target="_blank"><img src="{image1_base64}" alt="Image" style="width: 100%;"></a>',
+        f"""
+        <a href="{link_url}" target="_blank">
+            <div style="border: 4px solid #FF0046; padding: 5px; display: inline-block;">
+                <img src="{image2_base64}" style="width: 100%;">
+            </div>
+        </a>
+        """,
         unsafe_allow_html=True
     )
 with imgmn02:
@@ -65,7 +63,7 @@ with imgmn02:
         f"""
         <a href="{link_url}" target="_blank">
             <div style="border: 4px solid #FF0046; padding: 5px; display: inline-block;">
-                <img src="{image2_base64}" style="width: 100%;">
+                <img src="{image2}" style="width: 100%;">
             </div>
         </a>
         """,

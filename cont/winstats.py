@@ -23,7 +23,7 @@ def image_to_base64(image):
 # Mostrar la imagen con un marco
 st.markdown(
     f"""
-    <div style="border: 5px solid #4CAF50; padding: 10px; display: inline-block;">
+    <div style="border: 5px solid #FF0046; padding: 10px; display: inline-block;">
         <img src="data:image/jpeg;base64,{image_to_base64(image)}" style="width: 100%;">
     </div>
     """,

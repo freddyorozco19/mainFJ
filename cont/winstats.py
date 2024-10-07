@@ -11,20 +11,20 @@ st.image("Resources/Img/wyscoutlogo.png")
 image1 = Image.open("Resources/Img/wyscoutlogo.png")
 image2 = Image.open("Resources/Img/optalogo.png")
 
-# Dimensiones de la primera imagen
-new_width = 2061  # Manteniendo el ancho de la segunda imagen
-new_height = int((29 / 35) * new_width)  # Calculando el alto para la relación 35:29
-# Redimensionar la imagen
+
+# Obtener dimensiones de la segunda imagen
+new_width, new_height = image2.size  # Ancho y alto de la segunda imagen
+# Redimensionar la primera imagen
 resized_image = image1.resize((new_width, new_height), Image.LANCZOS)
-# Convertir a RGB si la imagen tiene un canal alfa
+# Convertir a RGB si la imagen tiene un canal alfa (opcional)
 if resized_image.mode == "RGBA":
     resized_image = resized_image.convert("RGB")
-
 # Guardar la nueva imagen
-resized_image.save("resized_image.jpg", "JPEG")
-
+resized_image.save("Resources/Img/resized_wyscoutlogo.png")  # Cambia el nombre según necesites
 # Mostrar la nueva imagen (opcional)
 resized_image.show()
+
+
 # Función para convertir la imagen a base64
 def image_to_base64(image):
     buffered = io.BytesIO()

@@ -15,8 +15,8 @@ image3 = Image.open("Resources/Img/fbreflogo.png")
 # Obtener dimensiones de la segunda imagen
 new_width, new_height = image2.size  # Ancho y alto de la segunda imagen
 resized_image1 = image1.resize((new_width, new_height), Image.LANCZOS)
-if resized_image.mode == "RGBA":
-    resized_image = resized_image1.convert("RGB")
+if resized_image1.mode == "RGBA":
+    resized_image1 = resized_image1.convert("RGB")
 resized_image1.save("Resources/Img/resized_wyscoutlogo.png")  # Cambia el nombre según necesites
 resized_image1.show()
 

@@ -11,7 +11,9 @@ image1 = Image.open("Resources/Img/wyscoutlogo.png")
 image2 = Image.open("Resources/Img/optalogo.png")
 image3 = Image.open("Resources/Img/fbreflogo.png")
 
-link_url = "https://www.winstats.com.ec"
+link_url1 = "https://wyscoutdata.streamlit.app"
+link_url2 = "https://opproccesdata.streamlit.app"
+link_url3 = "https://fbrefdata.streamlit.app"
 
 # Obtener dimensiones de la segunda imagen
 new_width, new_height = image2.size  # Ancho y alto de la segunda imagen
@@ -49,7 +51,7 @@ imgmn01, imgmn02, imgmn03 = st.columns(3)
 with imgmn01:
     st.markdown(
         f"""
-        <a href="{link_url}" target="_blank">
+        <a href="{link_url1}" target="_blank">
             <div style="border: 3px solid #FF0046; padding: 5px; display: inline-block;">
                 <img src="{image2_base64}" style="width: 100%;">
             </div>
@@ -60,7 +62,7 @@ with imgmn01:
 with imgmn02:
     st.markdown(
         f"""
-        <a href="{link_url}" target="_blank">
+        <a href="{link_url2}" target="_blank">
             <div style="border: 3px solid #FF0046; padding: 5px; display: inline-block;">
                 <img src="{image1_base64}" style="width: 100%;">
             </div>
@@ -71,7 +73,7 @@ with imgmn02:
 with imgmn03:
     st.markdown(
         f"""
-        <a href="{link_url}" target="_blank">
+        <a href="{link_url3}" target="_blank">
             <div style="border: 3px solid #FF0046; padding: 5px; display: inline-block;">
                 <img src="{image3_base64}" style="width: 100%;">
             </div>

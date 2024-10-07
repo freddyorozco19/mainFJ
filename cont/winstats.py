@@ -86,7 +86,7 @@ with imgmn03:
         """,
         unsafe_allow_html=True
     )
-
+st.markdown("<br><br>", unsafe_allow_html=True)
 imgmn04, imgmn05, imgmn06 = st.columns(3)
 with imgmn04:
     st.markdown(

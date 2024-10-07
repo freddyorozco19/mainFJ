@@ -83,9 +83,3 @@ with imgmn03:
 
 
 
-
-# Usar Markdown para crear un enlace alrededor de la imagen
-st.markdown(
-    f'<a href="{link_url}" target="_blank"><img src="{image1_base64}" alt="Image" style="width: 100%;"></a>',
-    unsafe_allow_html=True
-)

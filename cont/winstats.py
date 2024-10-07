@@ -50,7 +50,7 @@ with imgmn01:
     st.markdown(
         f"""
         <a href="{link_url1}" target="_blank">
-            <div style="border: 3px solid #FF0046; padding: 5px; display: inline-block;">
+            <div style="border: 3px solid #9F9F9F; padding: 5px; display: inline-block;">
                 <img src="{image2_base64}" style="width: 100%;">
             </div>
         </a>
@@ -59,7 +59,7 @@ with imgmn02:
     st.markdown(
         f"""
         <a href="{link_url2}" target="_blank">
-            <div style="border: 3px solid #FF0046; padding: 5px; display: inline-block;">
+            <div style="border: 3px solid #9F9F9F; padding: 5px; display: inline-block;">
                 <img src="{image1_base64}" style="width: 100%;">
             </div>
         </a>
@@ -70,7 +70,7 @@ with imgmn03:
     st.markdown(
         f"""
         <a href="{link_url3}" target="_blank">
-            <div style="border: 3px solid #FF0046; padding: 5px; display: inline-block;">
+            <div style="border: 3px solid #9F9F9F; padding: 5px; display: inline-block;">
                 <img src="{image3_base64}" style="width: 100%;">
             </div>
         </a>

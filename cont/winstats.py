@@ -30,7 +30,6 @@ resized_image2.show()
 
 
 
-# Función para convertir la imagen a base64
 def image_to_base64(image):
     buffered = io.BytesIO()
     # Cambiar el formato a PNG si la imagen tiene un canal alfa
@@ -38,7 +37,7 @@ def image_to_base64(image):
         image = image.convert("RGB")  # Convertir a RGB para JPEG
     image.save(buffered, format="PNG")  # Guarda como PNG
     img_str = base64.b64encode(buffered.getvalue()).decode()
-    return img_str
+    return f"data:image/png;base64,{img_str}"
 
 
 # Convertir image1 a base64

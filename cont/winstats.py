@@ -10,12 +10,14 @@ image = Image.open("Resources/Img/wyscoutlogo.png")
 
 # Función para convertir la imagen a base64
 def image_to_base64(image):
-    import io
-    import base64
     buffered = io.BytesIO()
-    image.save(buffered, format="JPEG")
+    # Cambiar el formato a PNG si la imagen tiene un canal alfa
+    if image.mode == "RGBA":
+        image = image.convert("RGB")  # Convertir a RGB para JPEG
+    image.save(buffered, format="PNG")  # Guarda como PNG
     img_str = base64.b64encode(buffered.getvalue()).decode()
     return img_str
+
 # Mostrar la imagen con un marco
 st.markdown(
     f"""

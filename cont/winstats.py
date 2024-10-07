@@ -9,7 +9,7 @@ st.image("Resources/Img/wyscoutlogo.png")
 
 # Cargar una imagen
 image1 = Image.open("Resources/Img/wyscoutlogo.png")
-image2 = Image.open("Resources/Img/wyscoutlogo.png")
+image2 = Image.open("Resources/Img/optalogo.png")
 
 # Función para convertir la imagen a base64
 def image_to_base64(image):

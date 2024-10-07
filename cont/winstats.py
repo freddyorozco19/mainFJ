@@ -11,6 +11,16 @@ st.image("Resources/Img/wyscoutlogo.png")
 image1 = Image.open("Resources/Img/wyscoutlogo.png")
 image2 = Image.open("Resources/Img/optalogo.png")
 
+# Dimensiones de la primera imagen
+new_width = 2061  # Manteniendo el ancho de la segunda imagen
+new_height = int((29 / 35) * new_width)  # Calculando el alto para la relación 35:29
+# Redimensionar la imagen
+resized_image = image1.resize((new_width, new_height), Image.ANTIALIAS)
+# Guardar la nueva imagen
+resized_image.save("resized_image.jpg")
+# Mostrar la nueva imagen (opcional)
+resized_image.show()
+
 # Función para convertir la imagen a base64
 def image_to_base64(image):
     buffered = io.BytesIO()
@@ -28,7 +38,7 @@ with imgmn01:
     st.markdown(
         f"""
         <div style="border: 5px solid #FF0046; padding: 10px; display: inline-block;">
-            <img src="data:image/jpeg;base64,{image_to_base64(image1)}" style="width: 100%;">
+            <img src="data:image/jpeg;base64,{image_to_base64(resized_image)}" style="width: 100%;">
         </div>
         """,
         unsafe_allow_html=True

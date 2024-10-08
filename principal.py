@@ -27,7 +27,7 @@ import math
 st.set_page_config(layout="wide")
 navigation_tree = {
     "Menu": [
-        st.Page("cont/winstats.py", title="Win Stats", icon=":material/download:"),
+        st.Page("cont/WinStats.py", title="Win Stats", icon=":material/download:"),
         #st.Page("cont/OptaJoinData.py", title="Join Data", icon=":material/cell_merge:"),
         st.Page("cont/FitStats.py", title="Fit Stats", icon=":material/analytics:"),        
         st.Page("cont/RegisterData.py", title="Register Data", icon=":material/leaderboard:")]
